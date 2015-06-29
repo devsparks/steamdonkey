@@ -1,0 +1,50 @@
+﻿
+settings:
+    mode: dev
+
+regular_expressions:
+    static_urls: 
+        pattern: ^(\d\d)([A-Z0-9]{6,10})/(.*)$
+        modifier: ig
+
+environments:
+    dev:
+        server:
+            ip: 127.0.0.1
+            port: 3000
+            
+        folders:
+            assets: 
+                root: assets/
+                style: css/
+                script: js/
+                images: img/
+                templates: tpl/
+                fonts: font/
+            debug: 
+                root: temp/debug/
+            layout:
+                root: layout/
+                src: src/
+                templates: templates/
+                
+        layout:
+            identifiers:
+                markup: markup
+                style: style
+                script: script
+            file_extensions:
+                markup: html
+                style: css
+                script: js
+            object_types:
+                global: site
+                templates: page_types
+                partial_templates: partials
+                modules: modules
+            
+    prod: &PROD
+        test_key:
+
+    stage: 
+        <<: *PROD

@@ -1,0 +1,16 @@
+﻿{
+  "name": "steamdonkey",
+  "version": "0.0.1",
+  "description": "experimental minimalistic website and blog engine",
+  "author": "Michael Kortstiege",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "js-yaml": "^3.3.1",
+    "chokidar": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devsparks/steamdonkey"
+  }
+}

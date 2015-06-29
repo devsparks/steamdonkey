@@ -1,0 +1,34 @@
+{
+    "site": [
+        "article",
+        "home",
+        "page"
+    ],
+    "page_types-article": [
+        "article"
+    ],
+    "partials-header": [
+        "article",
+        "home",
+        "page"
+    ],
+    "modules-login": [
+        "article",
+        "home",
+        "page"
+    ],
+    "partials-footer": [
+        "article",
+        "home",
+        "page"
+    ],
+    "page_types-home": [
+        "home"
+    ],
+    "modules-about": [
+        "home"
+    ],
+    "page_types-page": [
+        "page"
+    ]
+}

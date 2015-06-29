@@ -1,0 +1,41 @@
+{
+    "modules": {
+        "about": {
+            "markup": "\n<p>about</p>\n",
+            "css": 1
+        },
+        "login": {
+            "markup": "\n\n<p>login form</p>\n\n",
+            "css": 1,
+            "js": 1
+        }
+    },
+    "page_types": {
+        "article": {
+            "markup": "\n<!-- @import partials:header -->\n\n<h1>article</h1>\n\n<!-- @import partials:footer -->\n",
+            "css": 1,
+            "js": 1
+        },
+        "home": {
+            "markup": "\n<!-- @import partials:header -->\n\n<h1>homepage</h1>\n\n<!-- @import modules:about -->\n\n<!-- @import partials:footer -->\n",
+            "css": 1,
+            "js": 1
+        },
+        "page": {
+            "markup": "\n<!-- @import partials:header -->\n\n<h1>page</h1>\n\n<!-- @import partials:footer -->\n",
+            "css": 1,
+            "js": 1
+        }
+    },
+    "partials": {
+        "footer": {
+            "markup": "\n<h5>footer</h5>\n\n",
+            "css": 1
+        },
+        "header": {
+            "markup": "\n\n<h1>header</h1>\n\n<!-- @import modules:login -->\n\n",
+            "css": 1,
+            "js": 1
+        }
+    }
+}

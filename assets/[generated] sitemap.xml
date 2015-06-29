@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://www.yourdomain.com/</loc>
+    <xhtml:link 
+                 rel="alternate"
+                 hreflang="de"
+                 href="http://www.yourdomain.com/de/"
+                 />
+    <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://www.yourdomain.com/"
+                 />
+  </url>
+  
+  <url>
+    <loc>http://www.yourdomain.com/de/</loc>
+    <xhtml:link 
+                 rel="alternate"
+                 hreflang="en"
+                 href="http://www.yourdomain.com/"
+                 />
+     <xhtml:link 
+                 rel="alternate"
+                 hreflang="de"
+                 href="http://www.yourdomain.com/de/"
+                 />
+  </url>
+</urlset>
+
+<!-- https://support.google.com/webmasters/topic/2370587?hl=en 
+     International sites with google -->
+
+<!-- https://support.google.com/webmasters/answer/2620865?hl=en 
+     Use a sitemap to indicate alternate language pages -->

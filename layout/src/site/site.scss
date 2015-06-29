@@ -1,0 +1,13 @@
+
+@import 'reset';
+@import 'typography';
+@import 'variables';
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    overflow: visible;
+}
