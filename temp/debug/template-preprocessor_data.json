@@ -1,9 +1,0 @@
-{
-    "modules/about/about.html": "\r\n<p>about</p>\r\n",
-    "modules/login/login.html": "\r\n\r\n<p>login form</p>\r\n\r\n\r\n",
-    "page_types/article/article.html": "\r\n<!-- @import partials:header -->\r\n\r\n<h1>article</h1>\r\n\r\n<!-- @import partials:footer -->\r\n",
-    "page_types/home/home.html": "\r\n<!-- @import partials:header -->\r\n\r\n<h1>homepage</h1>\r\n\r\n<!-- @import modules:about -->\r\n\r\n<!-- @import partials:footer -->\r\n",
-    "page_types/page/page.html": "\r\n<!-- @import partials:header -->\r\n\r\n<h1>page</h1>\r\n\r\n<!-- @import partials:footer -->\r\n",
-    "partials/footer/footer.html": "\r\n<h5>footer</h5>\r\n\r\n",
-    "partials/header/header.html": "\r\n\r\n<h1>header</h1>\r\n\r\n<!-- @import modules:login -->\r\n\r\n\r\n\r\n"
-}
