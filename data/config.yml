@@ -1,7 +1,14 @@
 ﻿
 settings:
     mode: dev
-
+    languages:
+        - en
+        - de
+            
+    i18n_strings:
+        en:
+        de:
+        
 regular_expressions:
     static_urls: 
         pattern: ^(\d\d)([A-Z0-9]{6,10})/(.*)$
