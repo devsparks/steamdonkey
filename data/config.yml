@@ -21,19 +21,11 @@ environments:
             port: 3000
             
         folders:
-            assets: 
-                root: assets/
-                style: css/
-                script: js/
-                images: img/
-                templates: tpl/
-                fonts: font/
-            debug: 
-                root: temp/debug/
+            assets: assets/
+            debug: temp/debug/
             layout:
-                root: layout/
-                src: src/
-                templates: templates/
+                src: layout/src/
+                templates: layout/templates/
                 
         layout:
             identifiers:

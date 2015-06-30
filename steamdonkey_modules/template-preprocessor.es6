@@ -29,8 +29,8 @@ class TemplatePreprocessor
     this.folders = folders;
     this.layout = layout;
     this.debug = debug;
-    this.baseDir = this.folders.layout.root + this.folders.layout.src;
-    this.templateDir = this.folders.layout.root + this.folders.layout.templates;
+    this.baseDir = this.folders.layout.src;
+    this.templateDir = this.folders.layout.templates;
   }
   
   processTemplates() {
@@ -102,20 +102,20 @@ class TemplatePreprocessor
       let _repl = '';
       try {
         fs.openSync(baseDir + site + DOT + STYLE_EXT, READONLY)
-        _repl += '<link rel="stylesheet" href="' + SLASH + this.folders.assets.root + this.folders.assets[STYLE_ID] + site + DOT + STYLE_EXT + '" />' + "\n"
+        _repl += '<link rel="stylesheet" href="' + SLASH + this.folders.assets + STYLE_ID + SLASH + site + DOT + STYLE_EXT + '" />' + "\n"
       } catch(e) {}
       for (let i = 0; i < templatesResolved[tpl][STYLE_ID].length; i++) {
-        _repl += '\t<link rel="stylesheet" href="' + SLASH + this.folders.assets.root + this.folders.assets[STYLE_ID] + templatesResolved[tpl][STYLE_ID][i] + DOT +  STYLE_EXT + '" />' + "\n"
+        _repl += '\t<link rel="stylesheet" href="' + SLASH + this.folders.assets + STYLE_ID + SLASH + templatesResolved[tpl][STYLE_ID][i] + DOT +  STYLE_EXT + '" />' + "\n"
       }
       markup = markup.replace("<!-- $" + STYLE_ID + " -->", _repl.replace(/\n\t$/,''));
       
       _repl = '';
       try {
         fs.openSync(baseDir + site + DOT + SCRIPT_EXT, READONLY)
-        _repl += '<script src="' + SLASH + this.folders.assets.root + this.folders.assets[SCRIPT_ID] + site + DOT + SCRIPT_EXT + '"></script>' + "\n"
+        _repl += '<script src="' + SLASH + this.folders.assets + SCRIPT_ID + SLASH + site + DOT + SCRIPT_EXT + '"></script>' + "\n"
       } catch(e) {}
       for (let i = 0; i < templatesResolved[tpl][SCRIPT_ID].length; i++) {
-        _repl += '\t<script src="' + SLASH + this.folders.assets.root + this.folders.assets[SCRIPT_ID] + templatesResolved[tpl][SCRIPT_ID][i] + DOT +  SCRIPT_EXT + '"></script>' + "\n"
+        _repl += '\t<script src="' + SLASH + this.folders.assets + SCRIPT_ID + SLASH + templatesResolved[tpl][SCRIPT_ID][i] + DOT +  SCRIPT_EXT + '"></script>' + "\n"
       }
       markup = markup.replace("<!-- $" + SCRIPT_ID + " -->", _repl.replace(/\n\t$/,''));
 
@@ -127,8 +127,8 @@ class TemplatePreprocessor
     }
     
     if (this.debug) {
-      fs.writeFileSync(this.folders.debug.root + NAME + '_dependencies.json', JSON.stringify(dependencies, true, INDENT));
-      fs.writeFileSync(this.folders.debug.root + NAME + '_templatesResolved.json', JSON.stringify(templatesResolved, true, INDENT));  
+      fs.writeFileSync(this.folders.debug + NAME + '_dependencies.json', JSON.stringify(dependencies, true, INDENT));
+      fs.writeFileSync(this.folders.debug + NAME + '_templatesResolved.json', JSON.stringify(templatesResolved, true, INDENT));  
     }
     return;
   }
@@ -150,7 +150,7 @@ class TemplatePreprocessor
       }
     }
     if (this.debug) {
-      fs.writeFileSync(this.folders.debug.root + NAME + '_data.json', JSON.stringify(data, true, INDENT));
+      fs.writeFileSync(this.folders.debug + NAME + '_data.json', JSON.stringify(data, true, INDENT));
     }
     return data;
   }
@@ -189,7 +189,7 @@ class TemplatePreprocessor
     }
     
     if (this.debug) {
-        fs.writeFileSync(this.folders.debug.root + NAME + '_objects.json', JSON.stringify(objects, true, INDENT));
+        fs.writeFileSync(this.folders.debug + NAME + '_objects.json', JSON.stringify(objects, true, INDENT));
     }
     return objects;
   }
